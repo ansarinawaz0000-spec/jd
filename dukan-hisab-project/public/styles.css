@@ -1,0 +1,55 @@
+:root{
+  --bg:#f6f3ff; --card:#ffffff; --ink:#1f1b2e; --muted:#7a7390;
+  --brand:#7c3aed; --brand-dark:#5b21b6; --green:#16a34a; --red:#dc2626;
+  --amber:#d97706; --line:#e9e4f5; --radius:14px;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+body{margin:0; font-family:system-ui,'Noto Sans Devanagari',sans-serif; background:var(--bg); color:var(--ink); padding-bottom:84px;}
+.topbar{position:sticky; top:0; z-index:10; background:linear-gradient(135deg,var(--brand),var(--brand-dark)); color:#fff; padding:14px 16px; font-size:20px; font-weight:700; box-shadow:0 2px 8px rgba(0,0,0,.15);}
+#view{padding:14px 12px 20px; max-width:640px; margin:0 auto;}
+.bottomnav{position:fixed; bottom:0; left:0; right:0; display:flex; background:#fff; border-top:1px solid var(--line); z-index:20; padding-bottom:env(safe-area-inset-bottom);}
+.bottomnav button{flex:1; border:0; background:none; padding:8px 2px 6px; font-size:20px; color:var(--muted); display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer;}
+.bottomnav button span{font-size:11px;}
+.bottomnav button.active{color:var(--brand); font-weight:700;}
+
+.card{background:var(--card); border-radius:var(--radius); padding:14px; margin-bottom:12px; box-shadow:0 1px 4px rgba(60,30,120,.08); border:1px solid var(--line);}
+.card h3{margin:0 0 8px; font-size:16px;}
+.row{display:flex; gap:10px; flex-wrap:wrap;}
+.stat{flex:1 1 28%; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:12px 8px; text-align:center; margin-bottom:10px;}
+.stat .v{font-size:20px; font-weight:800;}
+.stat .l{font-size:12px; color:var(--muted); margin-top:4px;}
+.v.green{color:var(--green);} .v.red{color:var(--red);} .v.brand{color:var(--brand);}
+
+.btn{display:inline-block; border:0; border-radius:10px; padding:12px 16px; font-size:15px; font-weight:700; cursor:pointer; background:var(--brand); color:#fff; width:100%; margin-top:8px;}
+.btn.small{width:auto; padding:8px 12px; font-size:13px; margin-top:0;}
+.btn.ghost{background:#efe9fb; color:var(--brand-dark);}
+.btn.danger{background:#fee2e2; color:var(--red);}
+.btn.green{background:var(--green);}
+.fab{position:fixed; right:16px; bottom:88px; width:58px; height:58px; border-radius:50%; border:0; background:var(--brand); color:#fff; font-size:28px; box-shadow:0 4px 14px rgba(124,58,237,.4); cursor:pointer; z-index:15;}
+
+input,select,textarea{width:100%; padding:11px 12px; margin:6px 0; border:1px solid var(--line); border-radius:10px; font-size:15px; background:#fff; color:var(--ink); font-family:inherit;}
+label.fl{font-size:13px; color:var(--muted); font-weight:600;}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+.grid2 input{margin:2px 0;}
+.sec-title{font-size:14px; font-weight:800; color:var(--brand-dark); margin:14px 0 6px; border-bottom:2px solid var(--line); padding-bottom:4px;}
+
+.list-item{display:flex; justify-content:space-between; align-items:center; gap:8px; padding:12px 4px; border-bottom:1px solid var(--line);}
+.list-item:last-child{border-bottom:0;}
+.list-item .t{font-weight:700;}
+.list-item .s{font-size:12px; color:var(--muted);}
+.badge{display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px; background:#efe9fb; color:var(--brand-dark);}
+.badge.warn{background:#fef3c7; color:var(--amber);}
+.badge.ok{background:#dcfce7; color:var(--green);}
+.badge.red{background:#fee2e2; color:var(--red);}
+.money{font-weight:800;}
+.toolbar{display:flex; gap:8px; margin-bottom:10px;}
+.toolbar input{margin:0;}
+.empty{text-align:center; color:var(--muted); padding:30px 10px;}
+.back{background:none; border:0; color:var(--brand); font-size:15px; font-weight:700; cursor:pointer; padding:6px 0;}
+table.mini{width:100%; border-collapse:collapse; font-size:13px;}
+table.mini td,table.mini th{padding:7px 4px; border-bottom:1px solid var(--line); text-align:left;}
+.kv{display:flex; justify-content:space-between; padding:6px 0; font-size:14px; border-bottom:1px dashed var(--line);}
+.kv:last-child{border:0;}
+.lowstock{border-left:4px solid var(--red);}
+h2.ptitle{margin:4px 0 12px; font-size:19px;}
+.muted{color:var(--muted); font-size:13px;}

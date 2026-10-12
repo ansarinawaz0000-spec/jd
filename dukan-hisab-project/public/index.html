@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#7c3aed">
+<title>दुकान हिसाब</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🧵 दुकान हिसाब</div>
+</header>
+
+<main id="view"></main>
+
+<nav class="bottomnav" id="nav">
+  <button data-tab="home" class="active">🏠<span>घर</span></button>
+  <button data-tab="orders">🧾<span>ऑर्डर</span></button>
+  <button data-tab="customers">👤<span>ग्राहक</span></button>
+  <button data-tab="stock">🧵<span>स्टॉक</span></button>
+  <button data-tab="artisans">✂️<span>कारीगर</span></button>
+  <button data-tab="ledger">💰<span>हिसाब</span></button>
+</nav>
+
+<script src="/app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+}
+</script>
+</body>
+</html>

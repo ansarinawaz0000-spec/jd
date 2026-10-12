@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: dukan-hisab
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    # Render free plan par disk persist nahi hoti — data bachane ke liye
+    # paid plan par neeche wali disk lagao, ya Railway use karo (volume free me milta hai).
+    # disk:
+    #   name: dukan-data
+    #   mountPath: /data
+    #   sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      # Agar disk lagayi ho to ye uncomment karo:
+      # - key: DB_PATH
+      #   value: /data/dukan-hisab.db
